@@ -32,8 +32,8 @@ host:
   sysfs: /sys # Path to sysfs filesystem (default: /sys)
   procfs: /proc # Path to procfs filesystem (default: /proc)
 
-rapl:
-  zones: [] # zones to be enabled, empty enables all default zones
+# rapl:
+#   zones: [] # zones to be enabled, empty enables all default zones
 
 exporter:
   stdout: # stdout exporter related config
