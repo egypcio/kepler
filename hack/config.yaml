@@ -1,5 +1,5 @@
 log:
-  level: debug # debug, info, warn, error (default: info)
+  level: info # debug, info, warn, error (default: info)
   format: text # text or json (default: text)
 
 monitor:
@@ -41,9 +41,9 @@ exporter:
 
   prometheus: # prometheus exporter related config
     enabled: true
-    debugCollectors:
-      - go
-      - process
+  # debugCollectors:
+  #   - go
+  #   - process
     metricsLevel:
       - node
       - process
@@ -53,7 +53,7 @@ exporter:
 
 debug: # debug related config
   pprof: # pprof related config
-    enabled: true
+    enabled: false
 
 web:
   configFile: "" # Path to TLS server config file
