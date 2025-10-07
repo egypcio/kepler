@@ -23,4 +23,4 @@ RUN mkdir -p /etc/kepler
 COPY --from=builder /workspace/bin/kepler-release /usr/bin/kepler
 COPY --from=builder /workspace/hack/config.yaml /etc/kepler/.
 
-ENTRYPOINT ["/usr/bin/kepler --config.file=/etc/kepler/config.yaml"]
+ENTRYPOINT ["/usr/bin/kepler", "--config.file=/etc/kepler/config.yaml"]
