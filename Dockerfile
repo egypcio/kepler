@@ -21,6 +21,6 @@ FROM registry.access.redhat.com/ubi9:latest
 
 RUN mkdir -p /etc/kepler
 COPY --from=builder /workspace/bin/kepler-release /usr/bin/kepler
-COPY --from=builder /workspace/hack/config.yaml /etc/kepler/.
+COPY --from=builder /workspace/hack/config.fake-cpu-meter.yaml /etc/kepler/config.yaml
 
 ENTRYPOINT ["/usr/bin/kepler", "--config.file=/etc/kepler/config.yaml"]
