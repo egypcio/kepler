@@ -24,4 +24,8 @@ COPY --from=builder /workspace/bin/kepler-release /usr/bin/kepler
 COPY --from=builder /workspace/hack/config.fake-cpu-meter.yaml /etc/kepler/config.yaml
 COPY --from=builder /workspace/hack/redfish.yaml /etc/kepler/.
 
-ENTRYPOINT ["/usr/bin/kepler", "--config.file=/etc/kepler/config.yaml"]
+ENTRYPOINT [
+    "/usr/bin/kepler",
+        "--config.file=/etc/kepler/config.yaml",
+        "--experimental.platform.redfish.config-file=/etc/kepler/redfish.yaml"
+    ]
